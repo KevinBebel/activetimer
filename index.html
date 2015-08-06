@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="timer">
+    <head>
+        <meta charset="utf-8">
+        <title>Active Church Clock</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <script src="js/angular.min.js" charset="utf-8"></script>
+    </head>
+    <body ng-class="startblink ? 'blink' : ''" ng-controller="timerController">
+        <div ng-class="disable ? 'wrapper big-text' : 'wrapper'" >
+            <h1>{{currentEvent}}</h1>
+            <div class="timer">
+             <p>{{time}}</p>
+            </div>
+            <div class="container" ng-show="disable">
+                <div class="btn btn-danger" ng-click="stop()">Stop Schedule</div>
+            </div>
+            <div class="input_form" ng-hide="disable">
+                <form>
+                <div class="container">
+                    <div class="form-group">
+                        <label for="name">Enter The Name For The Event</label>
+                        <input type="text" class="form-control" id="name" ng-model="my_input.event" placeholder="Name" ng-disabled="disable">
+                    </div>
+                </div>
+                <div class="container" ng-hide="disable">
+                    <div class="form-group">
+                        <label for="duration">Duration in minutes</label>
+                        <input type="number" class="form-control" id="duration" ng-model="my_input.time" placeholder="Time" ng-disabled="disable">
+                    </div>
+                </div>
+
+                <div class="container" ng-hide="disable">
+                    <!--<div class="btn btn-warning btn-block" ng-click="addToSchedule()" ng-disabled="disable">Add to Schedule</div>-->
+                    <div class="btn btn-success btn-block" ng-click="start()" ng-disabled="disable">Start</div>
+
+                        <!--<ul class="list-group" style="margin-top : 10px">
+                          <li class="list-group-item" ng-repeat="task in schedule">{{task.event}}</li>
+                      </ul>-->
+                </div>
+                <form>
+            </div>
+        </div>
+        <script src="js/moment.js" charset="utf-8"></script>
+        <script src="js/app.js" charset="utf-8"></script>
+    </body>
+</html>

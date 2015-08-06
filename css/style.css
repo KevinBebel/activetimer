@@ -1,0 +1,42 @@
+body{
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100;
+}
+
+.wrapper h1{
+    font-size: 80px;
+}
+.big-text{
+    margin-top: 10em;
+}
+
+.big-text h1{
+    font: 120px;
+}
+
+.timer p{
+    font-size: 100px;
+}
+
+.big-text p{
+    font-size: 200px;
+}
+.blink {
+    -webkit-animation : alert 600ms infinite ;
+}
+@-webkit-keyframes alert {
+    0% {
+        background-color: black;
+        color : white;
+    }
+
+    100%{
+        background-color: #fff;
+        color :rgb(51, 51, 51);
+    }
+}
