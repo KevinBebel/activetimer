@@ -16,7 +16,7 @@ body{
 }
 
 .big-text h1{
-    font: 120px;
+    font: 180px;
 }
 
 .timer p{
@@ -24,7 +24,7 @@ body{
 }
 
 .big-text p{
-    font-size: 200px;
+    font-size: 250px;
 }
 .blink {
     -webkit-animation : alert 600ms infinite ;
