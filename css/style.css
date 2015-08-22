@@ -16,8 +16,9 @@ body{
 }
 
 .big-text h1{
-    font: 180px;
+    font-size: 180px;
 }
+
 
 .timer p{
     font-size: 100px;
